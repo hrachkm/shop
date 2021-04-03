@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 
 //Db connection
 
-mongoose.connect('mongodb://localhost/shop', {
+mongoose.connect('mongodb+srv://myshop:shopcart@cluster0.44ee1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 })
