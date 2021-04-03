@@ -4,7 +4,7 @@ const Cart = require('../models/cart')
 const Purchase = require('../models/purchase')
 /***********************GET************************/
 router.get('/', (req, res) => {
-    res.redirect('../../views/index.html')
+    res.render('../../views/index.html')
 })
 
 router.get('/cart', async (req, res) => {
