@@ -4,7 +4,7 @@ require('babel-polyfill')
 module.exports = {
     entry: ['babel-polyfill', './src/views/components/index.js'],
     output:{
-        path: __dirname + "/src/views/public",
+        path: __dirname + "/src/public/js",
         filename: "build.js"
     },
     module:{

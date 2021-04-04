@@ -6,7 +6,7 @@
         <div class="row">
             <div class="card-group">
                 <div v-for="product in products" :key="product.name" class="card">
-                    <img :src="'statics/imgs/'+product.image" class="card-img-top">
+                    <img :src="'/src/views/statics/imgs/'+ product.image" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{product.name}}</h5>
                         <p class="card-text">{{product.description}}</p>

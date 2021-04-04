@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const engines = require('consolidate');
 
 //Db connection
 
@@ -16,8 +17,10 @@ mongoose.connect('mongodb+srv://myshop:shopcart@cluster0.44ee1.mongodb.net/myFir
 //Settings
 
 app.set('port', process.env.PORT || 3200)
-app.set('views', path.join(__dirname+'/../', 'views'))
-app.set('view engine', 'ejs')
+// app.set('views', path.join(__dirname + '/../', 'views'))
+// app.set('view engine', 'html');
+// app.engine('html', require('ejs').renderFile);
+app.use(express.static(__dirname + '/../public'));
 
 //Middlewares
 
@@ -35,5 +38,6 @@ app.use('/', require('./routes'))
 //Init server
 
 app.listen(app.get('port'), () => {
+    console.log(global._rootdir)
     console.log(`Server listen in port ${app.get('port')}`)
 })

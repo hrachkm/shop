@@ -3,9 +3,10 @@ const router = Router()
 const Cart = require('../models/cart')
 const Purchase = require('../models/purchase')
 /***********************GET************************/
-router.get('/', (req, res) => {
-    res.render('../../views/index.html')
-})
+// router.get('/', (req, res) => {
+    
+//     res.render('index.html')
+// })
 
 router.get('/cart', async (req, res) => {
 
