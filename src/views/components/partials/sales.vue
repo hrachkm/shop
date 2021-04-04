@@ -11,7 +11,7 @@
                     <table class="table">
                         <tbody>
                             <tr v-for="product in sale.products" :key="product.name">
-                                <td><img height="50" width:="50" :src="'statics/imgs/'+product.image" alt="product.name"></td>
+                                <td><img height="50" width:="50" :src="'statics/imgs/'+product.image" :alt="product.name"></td>
                                 <td>{{product.name}}</td>
                                 <td>{{product.unitPrice}} $</td>
                                 <td>{{product.quantity}}</td>
