@@ -78,7 +78,7 @@
         },
         methods: {
             async getProducts(){
-                let products = await fetch('http://localhost:3200/cart')
+                let products = await fetch('https://nodeshopcart.herokuapp.com/cart')
                 this.products = await products.json()
                 if(this.totalSale > 0){
                     this.totalSale = 0
@@ -92,7 +92,7 @@
             },
             async deleteFromCart(name){
                 console.log(name)
-                let quit = await fetch(`http://localhost:3200/cart/${name}`,{
+                let quit = await fetch(`https://nodeshopcart.herokuapp.com/cart/${name}`,{
                     method: 'DELETE',
                 })
                 if((await quit.json()).deleted){
@@ -102,7 +102,7 @@
             },
             async modify(product){
                 product.modify = false
-                let update = await fetch('http://localhost:3200/cart',{
+                let update = await fetch('https://nodeshopcart.herokuapp.com/cart',{
                     method: 'PUT',
                     headers: {'content-type': 'application/json'},
                     body: JSON.stringify({
@@ -116,7 +116,7 @@
             },
             async purchase(){
 
-                let purchase = await fetch('http://localhost:3200/purchase', {
+                let purchase = await fetch('https://nodeshopcart.herokuapp.com/purchase', {
                     method: 'POST',
                     headers: {'content-type':'application/json'},
                     body: JSON.stringify({

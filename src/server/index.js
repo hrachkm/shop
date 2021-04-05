@@ -38,6 +38,5 @@ app.use('/', require('./routes'))
 //Init server
 
 app.listen(app.get('port'), () => {
-    console.log(global._rootdir)
     console.log(`Server listen in port ${app.get('port')}`)
 })

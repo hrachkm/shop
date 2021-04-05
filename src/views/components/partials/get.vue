@@ -59,7 +59,7 @@
                 if(confirm('¿Desea agregar este producto al carrito?')){
                     product.totalPrice = product.quantity * product.unitPrice
                     product.dateOrder = this.currentDate.toLocaleDateString()
-                    let add = await fetch('http://localhost:3200/add', {
+                    let add = await fetch('https://nodeshopcart.herokuapp.com/add', {
                         method: 'POST',
                         headers:{'content-type': 'application/json'},
                         body: JSON.stringify(product)

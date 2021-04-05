@@ -49,7 +49,7 @@
         },
         methods: {
             async getSales(){
-                let info = await fetch('http://localhost:3200/sales')
+                let info = await fetch('https://nodeshopcart.herokuapp.com/sales')
                 if(info){
                     this.sales = await info.json()
                 }
